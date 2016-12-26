@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:id="@+id/Clock"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:padding="10dp"
+        android:layout_alignTop="@+id/Clock"
+        android:layout_alignBottom="@+id/Clock"
+        android:id="@+id/layout"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/Clock">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="M"
+            android:id="@+id/monday"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="T"
+            android:id="@+id/tuesday"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="W"
+            android:id="@+id/wednesday"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="T"
+            android:id="@+id/thursday"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="F"
+            android:id="@+id/friday"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="S"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/saturday"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="S"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/sunday"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch2"
+        android:layout_alignBottom="@+id/layout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/layout"
+        android:checked="false" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/message"
+        android:hint="lütfen bir mesaj giriniz"
+        android:layout_toStartOf="@id/switch2"
+        android:layout_toEndOf="@+id/Clock" />
+
+</RelativeLayout>

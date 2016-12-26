@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="oguzhan.alarm.MainActivity2"
+    tools:showIn="@layout/activity_main">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buttonLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan"
+            android:id="@+id/scanButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:onClick="searchForDevices"
+            android:enabled="false" />
+
+       <!-- <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paired Devices"
+            android:id="@+id/pairedButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:onClick="scanForPairedDevices"
+            android:enabled="false"/> -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Socket"
+            android:id="@+id/openSocketButton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:onClick="openSocketAsServer"
+            android:enabled="false"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btTextView"
+        android:layout_toLeftOf="@+id/btSwitch"
+        android:layout_marginRight="25dp"
+        android:text="Bluetooth Connection"
+        android:textSize="15dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSwitch"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:checked="false"
+        android:textOff="Off"
+        android:textOn="On"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make visible for other devices"
+        android:id="@+id/cbMakeVisible"
+        android:layout_below="@+id/btTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btListView"
+        android:layout_below="@+id/cbMakeVisible"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/buttonLayout"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/socketProgress"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+*.iml
+*.gradle
+/gredlew
+/gredlew.properties
+/gredlew.bat
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+/gradle
+
