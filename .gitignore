@@ -1,12 +1,15 @@
 *.iml
 *.gradle
-/gredlew
-/gredlew.properties
-/gredlew.bat
+gredlew
+gredlew.properties
+gredlew.bat
+config
 /local.properties
 /.idea
 .DS_Store
 /build
+/hooks
+/info
 /captures
 /gradle
 
